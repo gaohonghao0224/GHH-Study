@@ -5,15 +5,3 @@ A
 publisher/pom.xml,b\8\b8eb34362c8e159228f59e0b4857c9ad2b59eab7
 p
 @consumer/src/test/java/cn/itcast/mq/helloworld/ConsumerTest.java,c\1\c14e67db4ed662cad89516ddc8d02f42fa4cb476
-l
-<consumer/src/main/java/cn/itcast/mq/config/FanoutConfig.java,0\e\0ef71bcc321e6677e6bf34d9cb19e0573d5f8ebb
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-n
->publisher/src/main/java/cn/itcast/mq/PublisherApplication.java,b\f\bf34154e197d59364f5e40f064c1308a0a1eb827
-o
-?publisher/src/test/java/cn/itcast/mq/spring/SpringAMQPTest.java,2\2\2217bb3fa89802441c5a71b7d3b09a251eabbd5d
-l
-<consumer/src/main/java/cn/itcast/mq/ConsumerApplication.java,3\5\3588dfb249de235a28e4e4fd4d5b0971a51a2890
-v
-Fconsumer/src/main/java/cn/itcast/mq/listener/SpringRabbitListener.java,8\0\80067efbfa37c8089c2c529dbcfec99a626bafb3

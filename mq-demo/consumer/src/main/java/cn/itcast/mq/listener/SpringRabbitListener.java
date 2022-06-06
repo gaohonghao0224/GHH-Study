@@ -10,6 +10,9 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 import java.util.Map;
 
+/**
+ * 测试提交
+ */
 @Component
 public class SpringRabbitListener {
 
