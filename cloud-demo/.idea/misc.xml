@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/feignApi/pom.xml" />
         <option value="$PROJECT_DIR$/geteway/geteway/pom.xml" />
         <option value="$PROJECT_DIR$/../RRCloud/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/../gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/../mq-demo/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

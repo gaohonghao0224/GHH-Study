@@ -1,6 +1,4 @@
 
-E
-erueka-server/HELP.md,4\6\46fd5e73c4feb616a1f006653552976cacdb9bc4
 †
 Verueka-server/src/test/java/com/example/eruekaserver/EruekaServerApplicationTests.java,d\7\d76030437c791acfcd7768872c8fca49e15ef7d2
 E
@@ -15,8 +13,6 @@ n
 >user-service/src/main/java/cn/itcast/user/UserApplication.java,b\9\b98d2d03730b645254b2903e54f2c0455a3806e0
 u
 Euser-service/src/main/java/cn/itcast/user/config/NacosProperties.java,9\8\9878021cb825127367dd3c61103b5b9e0fe5d88d
-@
-feignApi/HELP.md,3\a\3ac81fe284e3e0b3b18c6f5af47d86b26534c1f4
 C
 feignApi/.gitignore,b\5\b5bfe796f5b997f83d265f6020cc1f3f05051c87
 @
@@ -31,10 +27,6 @@ E
 order-service/pom.xml,d\3\d3bf53ecc442740843266a635cbfe9807b992566
 D
 user-service/pom.xml,d\2\d2f5d1978e5f519100a679c4109f89296278badc
-i
-9src/main/java/com/example/gateway/GatewayApplication.java,2\b\2bdb77fb53ca6f1d8f32389e6931cde635ae7cff
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 q
 Aorder-service/src/main/java/cn/itcast/order/OrderApplication.java,c\d\cd987be9fc5f586d0e97fd6a2fa3f447ce1c50da
 t
