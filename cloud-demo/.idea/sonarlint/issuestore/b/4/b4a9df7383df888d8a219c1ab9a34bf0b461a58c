@@ -1,0 +1,13 @@
+
+P	java:S125"<This block of commented-out lines of code should be removed.(ÎÏŠN
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(àæšÊüÿÿÿÿ
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(ÛÀƒçÿÿÿÿÿ
+e
+java:S1128"ORemove this unused import 'com.alibaba.nacos.api.config.annotation.NacosValue'.(İ«Ü¾
+e
+java:S1128	"ORemove this unused import 'org.springframework.beans.factory.annotation.Value'.(ìø›
+x
+java:S1128
+"]Remove this unused import 'org.springframework.cloud.context.config.annotation.RefreshScope'.(­¾î²ûÿÿÿÿ
+K
+java:S1128"0Remove this unused import 'java.time.LocalDate'.(›‘¬èıÿÿÿÿ

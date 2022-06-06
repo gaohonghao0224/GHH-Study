@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "pattern",
+      "type": "cn.itcast.user.config.NacosProperties",
+      "sourceType": "cn.itcast.user.config.NacosProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "pattern.date-format",
+      "type": "java.lang.String",
+      "sourceType": "cn.itcast.user.config.NacosProperties"
+    },
+    {
+      "name": "pattern.env-share-value",
+      "type": "java.lang.String",
+      "sourceType": "cn.itcast.user.config.NacosProperties"
+    },
+    {
+      "name": "pattern.name",
+      "type": "java.lang.String",
+      "sourceType": "cn.itcast.user.config.NacosProperties"
+    }
+  ],
+  "hints": []
+}
