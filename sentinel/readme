@@ -1,0 +1,5 @@
+此为Sentinel控制台程序
+
+default username/password :  sentinel/sentinel
+
+执行代码： java -jar sentinel-dashboard-1.8.4.jar -Dserver.port=8090
