@@ -25,7 +25,7 @@ public class TimerDemo2 {
         // 创建
         ScheduledExecutorService pool = Executors.newScheduledThreadPool(2);
 
-        // 开启定时任务
+          // 开启定时任务
         pool.scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
