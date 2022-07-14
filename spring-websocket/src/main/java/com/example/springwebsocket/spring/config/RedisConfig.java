@@ -63,26 +63,7 @@ public class RedisConfig {
     /**
      * 返回一个RedisTemplate对象
      */
-//    @Bean
-//    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
-//        RedisTemplate<String, Object> template = new RedisTemplate<>();
-//        Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
-//        ObjectMapper om = new ObjectMapper();
-//        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-//        om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
-//        jackson2JsonRedisSerializer.setObjectMapper(om);
-//        template.setConnectionFactory(factory);
-//        //key序列化方式
-//        template.setKeySerializer(new StringRedisSerializer());
-//        //value序列化
-//        template.setValueSerializer(jackson2JsonRedisSerializer);
-//        //value hashmap序列化
-//        template.setHashValueSerializer(jackson2JsonRedisSerializer);
-//        return template;
-//    }
-
     @Bean
-    @SuppressWarnings("all")
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
         // 我们为了自己开发方便，一般直接使用 <String, Object>
         RedisTemplate<String, Object> template = new RedisTemplate<String, Object>();
