@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>WebSocket</title>
+    <title>MoreIndex</title>
 
 </head>
+
 <style>
     *{
         padding: 0;
@@ -83,9 +84,9 @@
 
 </div>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
-<script>
 
+
+<script>
     let socket;
     let socketStatus = true;
     function openSocket() {
@@ -101,28 +102,25 @@
         let element = document.getElementById("socketStatus");
         if (socketStatus) {
             element.textContent = "关闭WebSocket";
-            const socketUrl="ws://127.0.0.1:8001";
-            socket = io.connect(socketUrl, {
-                transports: ['websocket'],
-                path: "/socketio-ws"
-            });
+            const socketUrl="ws://127.0.0.1:8080/ws/websocket?keyType=moreIndex";
+            socket = new WebSocket(socketUrl);
             //打开事件
-            socket.on('connect', () => {
+            socket.onopen = function() {
                 console.log("websocket已打开");
-            });
+            };
             //获得消息事件
-            socket.on('chatMsg', (msg) => {
-                const serverMsg = "收到服务端信息：" + msg;
+            socket.onmessage = function(msg) {
+                const serverMsg = "收到服务端信息：" + msg.data;
                 pushContent(serverMsg, 2);
-            });
+            };
             //关闭事件
-            socket.on('disconnect', () => {
+            socket.onclose = function() {
                 console.log("websocket已关闭");
-            });
+            };
             //发生了错误事件
-            socket.on('connect_error', () => {
+            socket.onerror = function() {
                 console.log("websocket发生了错误");
-            })
+            }
         } else {
             element.textContent = "打开WebSocket"
             socket.close();
@@ -143,7 +141,7 @@
 
             new Promise((resolve) => {
                 // 发消息
-                socket.emit('onMsg', msg)
+                socket.send(msg);
 
                 resolve();
             }).then(() => {
