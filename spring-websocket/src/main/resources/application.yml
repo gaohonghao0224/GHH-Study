@@ -3,6 +3,7 @@ spring:
     host: localhost
     port: 6379
     timeout: 100000
+    database: 1
 
 server:
   port: 8820

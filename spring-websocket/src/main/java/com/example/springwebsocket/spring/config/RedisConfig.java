@@ -24,7 +24,6 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.time.Duration;
 import java.util.logging.Logger;
 
-
 @EnableCaching
 @Configuration
 public class RedisConfig {
@@ -111,11 +110,8 @@ public class RedisConfig {
     }
 
 
-    @Autowired
-    private RedisConnectionFactory connectionFactory;
-
     @Bean
-    RedisMessageListenerContainer redisMessageListenerContainer() {
+    RedisMessageListenerContainer redisMessageListenerContainer(RedisConnectionFactory connectionFactory) {
         RedisMessageListenerContainer container = new RedisMessageListenerContainer();
         container.setConnectionFactory(connectionFactory);
         //container.addMessageListener(new RedisExpiredListener(), new PatternTopic("__keyevent@0__:expired"));
