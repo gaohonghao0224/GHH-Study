@@ -19,7 +19,7 @@ public class SpringSocketConfig implements WebSocketConfigurer {
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         // webSocket通道
         // 指定处理器和路径
-        registry.addHandler(webSocketHandler, "/ws/websocket")
+        registry.addHandler(webSocketHandler, "/ws/websocket","/ws/moreIndex")
                 // 指定自定义拦截器
                 .addInterceptors(new WebSocketInterceptor())
                 // 允许跨域

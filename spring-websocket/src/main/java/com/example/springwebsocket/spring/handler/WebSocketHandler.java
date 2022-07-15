@@ -1,5 +1,8 @@
 package com.example.springwebsocket.spring.handler;
 
+import com.example.springwebsocket.spring.utils.PropertiesReaderUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.logging.log4j.util.PropertiesUtil;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.*;
 import org.springframework.web.socket.handler.AbstractWebSocketHandler;
@@ -7,6 +10,9 @@ import org.springframework.web.socket.sockjs.transport.session.WebSocketServerSo
 import org.apache.commons.lang3.reflect.FieldUtils;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -91,13 +97,35 @@ public class WebSocketHandler extends AbstractWebSocketHandler {
      * 后端发送消息
      */
     public void sendMessage(String keyType, String message) {
-        String sessionId = keyTypeMap.get(keyType);
-        WebSocketSession session = sessionMap.get(sessionId);
+        List<String> propertyValues = getPropertyValues(keyType);
+        if (propertyValues.isEmpty()) return;
         try {
-            session.sendMessage(new TextMessage(message));
+            for (String key : propertyValues) {
+                String sessionId = keyTypeMap.get(key);
+                WebSocketSession session = sessionMap.get(sessionId);
+                session.sendMessage(new TextMessage(message));
+            }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 获取 当前的 redisKey 对应的 关系配置文件的值
+     * @return
+     */
+    public List<String> getPropertyValues(String keyType) {
+        try {
+            PropertiesReaderUtils.readProperties(this.getClass().getClassLoader().getResource("redisKeyRelation.properties").getPath());
+            String keys = PropertiesReaderUtils.getKey(keyType);
+            if (StringUtils.isBlank(keys)) return new ArrayList<>();
+
+            return Arrays.asList(keys.split(","));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
 }

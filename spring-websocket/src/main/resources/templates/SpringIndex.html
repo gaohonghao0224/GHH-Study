@@ -102,7 +102,7 @@
         let element = document.getElementById("socketStatus");
         if (socketStatus) {
             element.textContent = "关闭WebSocket";
-            const socketUrl="ws://127.0.0.1:8080/ws/websocket?keyType=webSocket";
+            const socketUrl="ws://127.0.0.1:8820/ws/websocket?keyType=webSocket";
             socket = new WebSocket(socketUrl);
             //打开事件
             socket.onopen = function() {

@@ -24,6 +24,9 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.time.Duration;
 import java.util.logging.Logger;
 
+/**
+ *  redis base config
+ */
 @EnableCaching
 @Configuration
 public class RedisConfig {
