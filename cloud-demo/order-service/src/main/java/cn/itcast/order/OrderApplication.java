@@ -20,9 +20,9 @@ public class OrderApplication {
     }
 
 
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate(){
-        return new RestTemplate();
-    }
+//    @Bean
+//    @LoadBalanced
+//    public RestTemplate restTemplate(){
+//        return new RestTemplate();
+//    }
 }

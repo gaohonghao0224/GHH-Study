@@ -9,9 +9,13 @@ import javax.annotation.PostConstruct;
  */
 public class InitBean implements InitializingBean {
 
+   static {
+        System.out.println("静态块");
+    }
+
     @PostConstruct
     public void init1(){
-        System.err.println( "@PostConstruct  注解初始化");
+        System.out.println( "@PostConstruct  注解初始化");
     }
 
     /**
@@ -22,10 +26,10 @@ public class InitBean implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.err.println( "InitializingBean  接口初始化");
+        System.out.println( "InitializingBean  接口初始化");
     }
 
     public void init3(){
-        System.err.println(" @Bean initMethod 属性初始化");
+        System.out.println(" @Bean initMethod 属性初始化");
     }
 }

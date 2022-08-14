@@ -1,6 +1,5 @@
 package com.zc.demo.scope.invalid;
 
-import jdk.internal.org.objectweb.asm.tree.analysis.Value;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;

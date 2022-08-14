@@ -16,8 +16,9 @@ public class OrderService {
 
     @Autowired
     private UserClient userClient;
-    @Autowired
-    private RestTemplate restTemplate;
+
+//    @Autowired
+//    private RestTemplate restTemplate;
 
     public Order queryOrderById(Long orderId) {
         // 1.查询订单
@@ -25,7 +26,7 @@ public class OrderService {
 
         User user = userClient.findUserById(order.getUserId());
         // 3. 封装 user
-        order.setUser(user);
+//        order.setUser(user);
         // 4.返回
         return order;
     }

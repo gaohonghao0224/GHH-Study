@@ -1,14 +1,17 @@
 package org.zc.stream;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Employee {
     private String name;
     private double salary;
-    private String sex;
-    private double bonus;
-    private String punish;
+//    private String sex;
+//    private double bonus;
+//    private String punish;
 
 
 

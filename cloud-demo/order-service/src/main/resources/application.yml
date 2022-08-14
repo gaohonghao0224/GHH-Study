@@ -24,17 +24,17 @@ logging:
 #     defaultZone: http://127.0.0.1:10086/eureka
 
 #eureka 配置, 客户端是否饥饿加载
-ribbon:
-  eager-load:
-    enabled: true
-    clients:
-      - user-server
-feign:
-  client:
-    config:
-      default:
-        loggerLevel: BASIC
-
-user-server:
-  ribbon:
-     NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+#ribbon:
+#  eager-load:
+#    enabled: true
+#    clients:
+#      - user-server
+#feign:
+#  client:
+#    config:
+#      default:
+#        loggerLevel: BASIC
+#
+#user-server:
+#  ribbon:
+#     NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
