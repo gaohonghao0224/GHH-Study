@@ -1,0 +1,8 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: conmmer
+  cloud:
+    nacos:
+      server-addr: localhost:8848

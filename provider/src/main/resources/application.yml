@@ -1,0 +1,10 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: f7af61ae-c19e-49e1-af69-6e4c2be6c4a4 # namesapce id
